@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Unpack project zip
+        run: |
+          for z in mendingz-client-project*.zip; do unzip -oq "$z"; done
+          cp -r proj/. .
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
