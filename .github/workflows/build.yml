@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Unpack project zip
         run: |
-          unzip -oq mendingz-v2.zip
+          unzip -oq mendingz-v2 (1).zip
           cp -r proj/. .
       - uses: actions/setup-java@v4
         with:
